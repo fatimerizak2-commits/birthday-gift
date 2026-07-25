@@ -1,0 +1,799 @@
+/*==================================
+        RESET
+===================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background: linear-gradient(
+    135deg,
+    #0B1F3A,
+    #163A5F,
+    #081526
+);
+
+    min-height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+
+/*==================================
+        MAIN CONTENT
+===================================*/
+
+.container{
+
+    position:relative;
+    z-index:10;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+
+.container h1{
+
+    font-family:'Great Vibes',cursive;
+
+    color:white;
+
+    font-size:clamp(60px,8vw,95px);
+
+    line-height:1.1;
+
+    text-shadow:
+    0 5px 20px rgba(255,255,255,.25);
+}
+
+
+.container h1 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:32px;
+
+    font-weight:300;
+
+    color:#ffdede;
+}
+
+
+
+.subtitle{
+
+    margin-top:20px;
+
+    margin-bottom:55px;
+
+    color:#ffe5e5;
+
+    font-size:20px;
+}
+
+
+
+.click{
+
+    margin-top:35px;
+
+    color:white;
+
+    font-size:15px;
+
+    letter-spacing:3px;
+}
+
+
+
+/*==================================
+        ENVELOPE
+===================================*/
+
+.envelope{
+
+    width:340px;
+
+    height:230px;
+
+    position:relative;
+
+    margin:auto;
+
+    cursor:pointer;
+
+    perspective:1200px;
+
+    transition:.4s ease;
+
+}
+
+
+.envelope:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.03);
+
+}
+
+
+/* envelope glow */
+
+.envelope::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    left:50%;
+
+    top:50%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    background:
+    radial-gradient(
+    rgba(255,255,255,.18),
+    transparent 70%
+    );
+
+
+    z-index:-1;
+
+}
+
+
+
+/* BACK */
+
+.back{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#D98C9D;
+
+    border-radius:10px;
+
+    box-shadow:
+
+    0 25px 45px rgba(0,0,0,.35);
+
+
+    z-index:1;
+
+}
+
+
+
+/* BOTTOM FOLD */
+
+.bottom{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:120px;
+
+
+    background:#E7A7B4;
+
+
+    clip-path:
+    polygon(
+    0 0,
+    50% 72%,
+    100% 0,
+    100% 100%,
+    0 100%
+    );
+
+
+    z-index:3;
+
+}
+
+
+
+/* LEFT FOLD */
+
+.left{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+
+    width:50%;
+
+    height:100%;
+
+
+    background:#CF7F90;
+
+
+    clip-path:
+    polygon(
+    0 0,
+    100% 50%,
+    0 100%
+    );
+
+
+    z-index:4;
+
+}
+/*==================================
+        RIGHT FOLD
+===================================*/
+
+.right{
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+
+    width:50%;
+
+    height:100%;
+
+
+    background:#CF7F90;
+
+
+    clip-path:
+    polygon(
+    100% 0,
+    0 50%,
+    100% 100%
+    );
+
+
+    z-index:4;
+
+}
+
+
+
+/*==================================
+        TOP FLAP
+===================================*/
+
+.top{
+
+    position:absolute;
+
+
+    width:100%;
+
+    height:125px;
+
+
+    top:0;
+
+    left:0;
+
+
+    background:#B96A7C;
+
+
+    clip-path:
+    polygon(
+    0 0,
+    100% 0,
+    50% 100%
+    );
+
+
+    transform-origin:top center;
+
+
+    transition:.8s ease;
+
+
+    z-index:6;
+
+}
+
+
+
+/*==================================
+        WAX SEAL
+===================================*/
+
+.seal{
+
+    position:absolute;
+
+
+    width:65px;
+
+    height:65px;
+
+
+    left:50%;
+
+    top:55%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    border-radius:50%;
+
+
+    background:
+    linear-gradient(
+    #f7dd8d,
+    #c9921f
+    );
+
+
+    box-shadow:
+
+    inset 0 4px 8px rgba(255,255,255,.4),
+
+    0 8px 18px rgba(0,0,0,.3);
+
+
+
+    z-index:7;
+
+
+    transition:.5s ease;
+
+}
+
+
+
+.seal::before{
+
+    content:"❤";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    color:white;
+
+
+    font-size:25px;
+
+}
+
+
+
+/*==================================
+        CLICK ANIMATION
+===================================*/
+
+
+.envelope:active{
+
+    transform:scale(.97);
+
+}
+
+
+
+/*==================================
+        FADE TO LETTER PAGE
+===================================*/
+
+
+body.fade-out{
+
+    animation:
+    fadeOut 1s forwards;
+
+}
+
+
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+
+    to{
+
+        opacity:0;
+
+    }
+
+}/*==================================
+        FLOATING HEARTS
+===================================*/
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-60px;
+
+
+    color:rgba(255,255,255,.35);
+
+
+    font-size:22px;
+    animation:
+    heartFloat linear infinite;
+
+}
+.hearts span:nth-child(1){
+
+    left:8%;
+
+    animation-duration:8s;
+
+}
+
+
+.hearts span:nth-child(2){
+
+    left:20%;
+
+    animation-duration:11s;
+
+}
+
+
+.hearts span:nth-child(3){
+
+    left:35%;
+
+    animation-duration:9s;
+
+}
+
+
+.hearts span:nth-child(4){
+
+    left:50%;
+
+    animation-duration:12s;
+
+}
+
+
+.hearts span:nth-child(5){
+
+    left:66%;
+
+    animation-duration:10s;
+
+}
+
+
+.hearts span:nth-child(6){
+
+    left:82%;
+
+    animation-duration:8.5s;
+
+}
+
+
+.hearts span:nth-child(7){
+
+    left:94%;
+
+    animation-duration:11s;
+
+}
+
+
+
+@keyframes heartFloat{
+
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(.5);
+
+        opacity:0;
+
+    }
+
+
+    20%{
+
+        opacity:.8;
+
+    }
+
+
+    100%{
+
+        transform:
+        translateY(-120vh)
+        scale(1.5);
+
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/*==================================
+        STICKERS
+===================================*/
+
+
+.sticker{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    user-select:none;
+
+
+    animation:
+    stickerFloat 5s ease-in-out infinite;
+
+}
+
+
+
+.cat{
+
+    width:90px;
+
+    left:4%;
+
+    top:8%;
+
+}
+
+
+
+.lilies{
+
+    width:120px;
+
+    right:5%;
+
+    top:6%;
+
+}
+
+
+
+.flower{
+
+    width:85px;
+
+    left:7%;
+
+    bottom:8%;
+
+}
+
+
+
+.kiss{
+
+    width:120px;
+
+    right:8%;
+
+    bottom:10%;
+
+}
+
+
+
+.teddy{
+
+    width:95px;
+
+    right:3%;
+
+    top:55%;
+
+}
+
+
+
+
+@keyframes stickerFloat{
+
+
+    0%,100%{
+
+        transform:
+        translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:
+        translateY(-15px);
+
+    }
+
+}
+
+
+
+/*==================================
+        RESPONSIVE
+===================================*/
+
+
+@media(max-width:768px){
+
+
+    .container h1{
+
+        font-size:58px;
+
+    }
+
+
+    .container h1 span{
+
+        font-size:25px;
+
+    }
+
+
+    .subtitle{
+
+        font-size:16px;
+
+    }
+
+
+
+    .envelope{
+
+        width:280px;
+
+        height:190px;
+
+    }
+
+
+
+    .cat{
+
+        width:60px;
+
+    }
+
+
+    .lilies{
+
+        width:80px;
+
+    }
+
+
+    .flower{
+
+        width:60px;
+
+    }
+
+
+    .kiss{
+
+        width:45px;
+
+    }
+
+
+    .teddy{
+
+        width:65px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+    .container h1{
+
+        font-size:44px;
+
+    }
+
+
+    .container h1 span{
+
+        font-size:22px;
+
+    }
+
+
+    .subtitle{
+
+        font-size:14px;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    .envelope{
+
+        width:220px;
+
+        height:150px;
+
+    }
+
+
+
+    .seal{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+
+}

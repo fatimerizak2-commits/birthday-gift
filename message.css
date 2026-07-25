@@ -1,0 +1,962 @@
+/*==================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("images/uss.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+/*==================================================
+                    OVERLAY
+==================================================*/
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(6px);
+
+    z-index:1;
+
+}
+
+/*==================================================
+                MAIN CONTAINER
+==================================================*/
+
+.container{
+
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    z-index:5;
+
+}
+
+/*==================================================
+                    TITLE
+==================================================*/
+
+h1{
+
+    position:absolute;
+
+    width:100%;
+
+    top:45px;
+
+    text-align:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:95px;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 5px 20px rgba(0,0,0,.35);
+
+    animation:fadeDown 1.2s ease;
+
+}
+
+.subtitle{
+
+    position:absolute;
+
+    width:100%;
+
+    top:155px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:300;
+
+    letter-spacing:1px;
+
+    color:white;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.35);
+
+    animation:fadeDown 1.4s ease;
+
+}
+
+/*==================================================
+                LETTER SECTION
+==================================================*/
+
+.letter-wrapper{
+
+    position:absolute;
+
+    left:50%;
+    top:58%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/*==================================================
+                LETTER PREVIEW
+==================================================*/
+
+.letter{
+
+    position:absolute;
+
+    top:-35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:300px;
+
+    height:190px;
+
+    background:#fffdf9;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+    z-index:10;
+
+    transition:1s ease;
+
+}
+
+.letter::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:8px;
+
+    background:linear-gradient(
+        90deg,
+        #f7bfd0,
+        #ffdce8,
+        #f7bfd0
+    );
+
+    border-radius:12px 12px 0 0;
+
+}
+
+.letter h3{
+
+    text-align:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:38px;
+
+    color:#d75a81;
+
+    margin-bottom:12px;
+
+}
+
+.letter p{
+
+    text-align:center;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+/*==================================================
+                    ENVELOPE
+==================================================*/
+
+.envelope{
+
+    position:relative;
+
+    width:340px;
+
+    height:220px;
+
+    margin-top:60px;
+
+    z-index:5;
+
+}
+
+/*==========================
+        BACK PANEL
+==========================*/
+
+.back{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#f9dce5;
+
+    border-radius:12px;
+
+    z-index:1;
+
+}
+
+/*==========================
+        FRONT POCKET
+==========================*/
+
+.front{
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:100%;
+
+    background:#f4c8d6;
+
+    border-radius:0 0 12px 12px;
+
+    overflow:hidden;
+
+    z-index:8;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.20);
+
+}
+
+/* Left Fold */
+
+.front::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:50%;
+    height:100%;
+
+    background:#efbdd0;
+
+    clip-path:polygon(
+        0 0,
+        100% 50%,
+        0 100%
+    );
+
+}
+
+/* Right Fold */
+
+.front::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+    top:0;
+
+    width:50%;
+    height:100%;
+
+    background:#efbdd0;
+
+    clip-path:polygon(
+        100% 0,
+        0 50%,
+        100% 100%
+    );
+
+}
+
+/*==========================
+        TOP FLAP
+==========================*/
+
+.flap{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:120px;
+
+    background:#ebb2c5;
+
+    clip-path:polygon(
+        0 0,
+        50% 100%,
+        100% 0
+    );
+
+    transform-origin:top center;
+
+    transition:transform .8s ease;
+
+    z-index:9;
+
+}
+
+/*==========================
+        WAX SEAL
+==========================*/
+
+.seal{
+
+    position:absolute;
+
+    left:50%;
+    top:95px;
+
+    transform:translateX(-50%);
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:#d94c73;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+    z-index:11;
+
+}
+
+/*==========================
+        BUTTONS
+==========================*/
+
+#openLetter{
+
+    margin-top:40px;
+
+    padding:14px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ff89ad,
+        #ff5f91
+    );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.25);
+
+}
+
+#openLetter:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
+
+}
+
+.back-btn{
+
+    margin-top:22px;
+
+    color:#ffffff;   /* white */
+
+    font-size:17px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.45);
+
+    animation:pulse 1.5s infinite;
+
+    transition:.35s;
+
+}
+
+.back-btn:hover{
+
+    color:#ffd6e5;
+
+    transform:scale(1.08);
+
+}
+
+#backBtn{
+    color:white !important;
+}
+/*==========================
+        OPEN EFFECT
+==========================*/
+
+.flap.open{
+
+    transform:rotateX(180deg);
+
+}
+
+.letter.open{
+
+    transform:translate(-50%,-170px);
+
+}
+/*==================================================
+                POLAROID PHOTOS
+==================================================*/
+
+.photo{
+
+    position:absolute;
+
+    width:180px;
+    height:220px;
+
+    background:#ffffff;
+
+    padding:12px 12px 38px;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.35);
+
+    transition:.4s ease;
+
+    animation:photoFloat 5s ease-in-out infinite;
+
+}
+
+.photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:4px;
+
+}
+
+.tape{
+
+    position:absolute;
+
+    width:70px;
+    height:22px;
+
+    left:50%;
+    top:-10px;
+
+    transform:translateX(-50%) rotate(-4deg);
+
+    background:rgba(255,255,255,.65);
+
+    border-radius:4px;
+
+    backdrop-filter:blur(4px);
+
+}
+
+/* Photo Positions */
+
+.photo1{
+
+    top:190px;
+    left:70px;
+
+    transform:rotate(-8deg);
+
+}
+
+.photo2{
+
+    top:190px;
+    right:70px;
+
+    transform:rotate(8deg);
+
+}
+
+.photo3{
+
+    bottom:60px;
+    left:120px;
+
+    transform:rotate(6deg);
+
+}
+
+.photo4{
+
+    bottom:60px;
+    right:120px;
+
+    transform:rotate(-6deg);
+
+}
+
+.photo:hover{
+
+    transform:scale(1.08) rotate(0deg);
+
+    z-index:30;
+
+}
+
+/*==================================================
+                DECORATIONS
+==================================================*/
+
+.sticker{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    animation:floatSticker 5s ease-in-out infinite;
+
+}
+
+.flower1{
+
+    width:120px;
+
+    top:30px;
+    left:20px;
+
+}
+
+.flower2{
+
+    width:130px;
+
+    top:30px;
+    right:20px;
+
+}
+
+.flower3{
+
+    width:120px;
+
+    bottom:20px;
+    left:30px;
+
+}
+
+.butterfly{
+
+    width:80px;
+
+    bottom:25px;
+    right:40px;
+
+}
+
+/*==================================================
+                HEARTS
+==================================================*/
+
+.hearts{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-80px;
+
+    font-size:28px;
+
+    opacity:.75;
+
+    animation:heartUp 10s linear infinite;
+
+}
+
+.hearts span:nth-child(1){
+
+    left:8%;
+    animation-delay:0s;
+
+}
+
+.hearts span:nth-child(2){
+
+    left:28%;
+    animation-delay:2s;
+
+}
+
+.hearts span:nth-child(3){
+
+    left:50%;
+    animation-delay:4s;
+
+}
+
+.hearts span:nth-child(4){
+
+    left:72%;
+    animation-delay:1s;
+
+}
+
+.hearts span:nth-child(5){
+
+    left:92%;
+    animation-delay:3s;
+
+}
+/*==================================================
+                ANIMATIONS
+==================================================*/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes photoFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes floatSticker{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+@keyframes heartUp{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.45;
+
+    }
+
+}
+
+body.fade{
+
+    animation:fadeOut .8s forwards;
+
+}
+
+@keyframes fadeOut{
+
+    to{
+
+        opacity:0;
+        transform:scale(1.02);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    h1{
+
+        font-size:60px;
+
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+    .photo{
+
+        width:120px;
+        height:160px;
+
+    }
+
+    .letter{
+
+        width:240px;
+        height:160px;
+
+    }
+
+    .envelope{
+
+        width:260px;
+        height:170px;
+
+    }
+
+    .flower1,
+    .flower2,
+    .flower3{
+
+        width:80px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    h1{
+
+        font-size:45px;
+        top:35px;
+
+    }
+
+    .subtitle{
+
+        top:105px;
+        font-size:15px;
+        padding:0 20px;
+
+    }
+
+    .photo{
+
+        width:90px;
+        height:120px;
+
+    }
+
+    .photo1{
+
+        left:10px;
+
+    }
+
+    .photo2{
+
+        right:10px;
+
+    }
+
+    .photo3{
+
+        left:10px;
+        bottom:30px;
+
+    }
+
+    .photo4{
+
+        right:10px;
+        bottom:30px;
+
+    }
+
+    .flower1,
+    .flower2,
+    .flower3{
+
+        width:60px;
+
+    }
+
+    .butterfly{
+
+        width:50px;
+
+    }
+
+    .back-btn{
+
+        font-size:13px;
+        letter-spacing:3px;
+
+    }
+
+    #openLetter{
+
+        padding:12px 28px;
+        font-size:15px;
+
+    }
+
+}

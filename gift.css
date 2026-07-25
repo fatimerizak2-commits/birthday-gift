@@ -1,0 +1,470 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+
+.title,
+.gifts,
+.back-btn{
+    position:relative;
+    z-index:5;
+}
+@keyframes heartFloat{
+
+    0%{
+        transform:translateY(0) scale(.5);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+    }
+
+}
+.card{
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+}
+.card:hover{
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.45);
+
+}
+body.fade{
+    animation:fadeOut .8s forwards;
+}
+
+@keyframes fadeOut{
+
+    from{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+    }
+
+}
+
+body{
+
+min-height:100vh;
+
+background: linear-gradient(
+    135deg,
+    #0B1F3A,
+    #163A5F,
+    #081526
+);
+
+background-size:cover;
+
+background-position:center;
+
+font-family:'Poppins';
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+}
+
+
+
+
+.title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+animation:show 1s;
+
+}
+
+
+
+.title h1{
+
+font-family:'Great Vibes';
+
+font-size:80px;
+
+}
+
+
+
+.title p{
+
+font-size:20px;
+
+}
+
+
+
+
+.gifts{
+
+
+display:flex;
+
+gap:40px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+
+}
+.hearts span{
+
+    position:absolute;
+
+    bottom:-60px;
+
+
+    color:rgba(255,255,255,.35);
+
+
+    font-size:22px;
+
+
+    animation:
+    heartFloat linear infinite;
+
+}
+
+
+
+.hearts span:nth-child(1){
+
+    left:8%;
+
+    animation-duration:8s;
+
+}
+
+
+.hearts span:nth-child(2){
+
+    left:20%;
+
+    animation-duration:11s;
+
+}
+
+
+.hearts span:nth-child(3){
+
+    left:35%;
+
+    animation-duration:9s;
+
+}
+
+
+.hearts span:nth-child(4){
+
+    left:50%;
+
+    animation-duration:12s;
+
+}
+
+
+.hearts span:nth-child(5){
+
+    left:66%;
+
+    animation-duration:10s;
+
+}
+
+
+.hearts span:nth-child(6){
+
+    left:82%;
+
+    animation-duration:8.5s;
+
+}
+
+
+.hearts span:nth-child(7){
+
+    left:94%;
+
+    animation-duration:11s;
+
+}
+/*==========================
+        BACK BUTTON
+==========================*/
+
+.back-btn{
+
+    margin-top:40px;
+
+    color:white;
+
+    font-size:17px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    animation:pulse 1.5s infinite;
+
+    transition:.35s;
+
+    text-shadow:
+    0 3px 10px rgba(0,0,0,.5);
+
+}
+
+
+.back-btn:hover{
+
+    color:#ffd6e5;
+
+    transform:scale(1.08);
+
+}
+
+
+@keyframes pulse{
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.45;
+
+    }
+
+}
+
+
+.card{
+
+
+width:260px;
+
+height:340px;
+
+
+background:
+
+rgba(255,255,255,.85);
+
+
+border-radius:25px;
+
+
+text-decoration:none;
+
+
+color:#9b4b65;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+padding:30px;
+
+
+transition:.5s;
+
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.4);
+
+
+}
+
+
+
+.card img{
+
+
+width:120px;
+
+height:120px;
+
+object-fit:contain;
+
+
+}
+
+
+
+.card h2{
+
+
+font-family:'Great Vibes';
+
+font-size:45px;
+
+margin-top:20px;
+
+
+}
+
+
+
+.card p{
+
+color:#555;
+
+}
+
+
+
+.card:hover{
+
+
+transform:
+
+translateY(-20px)
+scale(1.05);
+
+
+}
+
+
+
+
+.stickers img{
+
+
+position:absolute;
+
+width:100px;
+
+animation:float 4s infinite;
+
+
+}
+
+
+
+.stickers img:first-child{
+
+
+left:80px;
+
+bottom:80px;
+
+}
+
+
+
+.stickers img:last-child{
+
+
+right:80px;
+
+top:150px;
+
+}
+
+
+
+
+@keyframes float{
+
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+
+
+@keyframes show{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+.title h1{
+
+font-size:55px;
+
+}
+
+
+.card{
+
+width:220px;
+
+height:300px;
+
+}
+
+
+}

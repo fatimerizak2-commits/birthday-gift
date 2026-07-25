@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="welcome.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <p class="date">
+            26-07-06
+        </p>
+
+        <h1>
+            Happy Birthday
+            <span>Fathallah</span>
+        </h1>
+
+        <p class="message">
+            I hope this little gift will make you happy 💘
+        </p>
+
+        <!-- Stickers -->
+        <img src="images/cutieflower.png" class="sticker flower" alt="">
+        <img src="images/lvy.png" class="sticker lilies" alt="">
+        <img src="images/cake.png" class="sticker teddy" alt="">
+
+        <p class="click">
+            Click anywhere ✨
+        </p>
+
+    </main>
+
+    <script>
+
+        document.body.addEventListener("click", () => {
+
+            document.body.classList.add("fade");
+
+            setTimeout(() => {
+
+                window.location.href = "gift.html";
+
+            },800);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

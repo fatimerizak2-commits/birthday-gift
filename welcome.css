@@ -1,0 +1,416 @@
+/*==================================
+            RESET
+===================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("images/uss.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+/*==================================
+            OVERLAY
+===================================*/
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.15);
+
+    backdrop-filter:blur(1px);
+
+}
+
+/*==================================
+            CONTENT
+===================================*/
+
+.content{
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeIn 1.5s ease;
+
+    width:90%;
+
+}
+
+.date{
+
+    font-size:22px;
+
+    letter-spacing:6px;
+
+    margin-bottom:20px;
+
+    color:#ffe9e9;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.5);
+
+}
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:110px;
+
+    line-height:1;
+
+    text-shadow:
+    0 0 15px rgba(255,255,255,.3),
+    0 5px 25px rgba(0,0,0,.45);
+
+}
+
+h1 span{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:36px;
+
+    font-weight:300;
+
+}
+
+.message{
+
+    margin-top:40px;
+
+    font-size:24px;
+
+    color:white;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.4);
+
+}
+
+.click{
+
+    margin-top:90px;
+
+    font-size:17px;
+
+    letter-spacing:5px;
+
+    animation:pulse 1.5s infinite;
+
+}
+/*==================================
+            STICKERS
+===================================*/
+
+.sticker{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+/* Top Left */
+
+.cat{
+
+    width:90px;
+
+    top:110px;
+
+    left:120px;
+
+}
+
+/* Top Right */
+
+.lilies{
+
+    width:120px;
+
+    top:110px;
+
+    right:130px;
+
+}
+
+/* Bottom Left */
+
+.flower{
+
+    width:100px;
+
+    bottom:120px;
+
+    left:130px;
+
+}
+
+/* Middle Right */
+
+.teddy{
+
+    width:90px;
+
+    top:330px;
+
+    right:170px;
+
+}
+
+/* Bottom Right */
+
+.kiss{
+
+    width:65px;
+
+    bottom:120px;
+
+    right:170px;
+
+}
+
+/*==================================
+            ANIMATIONS
+===================================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.45;
+
+    }
+
+}
+
+/*==================================
+            FADE OUT
+===================================*/
+
+body.fade{
+
+    animation:fadeOut .8s forwards;
+
+}
+
+@keyframes fadeOut{
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+/*==================================
+            RESPONSIVE
+===================================*/
+
+@media(max-width:900px){
+
+    h1{
+
+        font-size:78px;
+
+    }
+
+    h1 span{
+
+        font-size:30px;
+
+    }
+
+    .message{
+
+        font-size:18px;
+
+        padding:0 20px;
+
+    }
+
+    .click{
+
+        margin-top:60px;
+
+    }
+
+    .cat{
+
+        width:60px;
+
+        left:30px;
+
+        top:100px;
+
+    }
+
+    .lilies{
+
+        width:80px;
+
+        right:30px;
+
+        top:100px;
+
+    }
+
+    .flower{
+
+        width:70px;
+
+        left:30px;
+
+        bottom:70px;
+
+    }
+
+    .teddy{
+
+        width:60px;
+
+        right:40px;
+
+        top:280px;
+
+    }
+
+    .kiss{
+
+        width:45px;
+
+        right:40px;
+
+        bottom:70px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .date{
+
+        font-size:15px;
+
+        letter-spacing:3px;
+
+    }
+
+    h1{
+
+        font-size:52px;
+
+    }
+
+    h1 span{
+
+        font-size:22px;
+
+    }
+
+    .message{
+
+        font-size:15px;
+
+        padding:0 15px;
+
+        margin-top:25px;
+
+    }
+
+    .click{
+
+        font-size:13px;
+
+        margin-top:45px;
+
+    }
+
+}

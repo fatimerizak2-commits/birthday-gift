@@ -1,0 +1,652 @@
+/*==================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("images/uss.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+}
+
+
+/*==================================================
+                    OVERLAY
+==================================================*/
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(6px);
+
+    z-index:1;
+
+}
+
+
+/*==================================================
+                    CONTENT
+==================================================*/
+
+.content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:60px 0 80px;
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeIn 1.2s ease;
+
+}
+
+
+/*==================================================
+                    TITLE
+==================================================*/
+
+.date{
+
+    font-size:20px;
+
+    letter-spacing:6px;
+
+    color:#ffe5ef;
+
+    margin-bottom:20px;
+
+}
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:95px;
+
+    line-height:1;
+
+    text-shadow:
+        0 5px 20px rgba(0,0,0,.45);
+
+}
+
+h1 span{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:34px;
+
+    font-weight:300;
+
+}
+
+.subtitle{
+
+    margin-top:35px;
+
+    font-size:22px;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.35);
+
+}
+
+
+/*==================================================
+                    CAKE
+==================================================*/
+
+.cake-section{
+
+    margin-top:55px;
+
+}
+
+.cake{
+
+    width:300px;
+
+    animation:
+        float 4s ease-in-out infinite,
+        glow 2.5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 15px 30px rgba(255,180,210,.45));
+
+}
+
+
+/*==================================================
+                    PHOTO
+==================================================*/
+
+.memory{
+
+    margin-top:55px;
+
+}
+
+.memory img{
+
+    width:330px;
+
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    border:8px solid white;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.30);
+
+    transition:.4s;
+
+}
+
+.memory img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/*==================================================
+                FINAL MESSAGE
+==================================================*/
+
+.final-message{
+
+    margin-top:45px;
+
+    max-width:700px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    color:white;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+.final-message p{
+
+    margin-bottom:18px;
+
+}
+/*==================================================
+                DECORATIONS
+==================================================*/
+
+.sticker{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:2;
+
+    animation:float 6s ease-in-out infinite;
+
+}
+
+.flower1{
+
+    width:120px;
+
+    top:30px;
+
+    left:30px;
+
+}
+
+.flower2{
+
+    width:120px;
+
+    top:30px;
+
+    right:30px;
+
+}
+
+.butterfly{
+
+    width:80px;
+
+    bottom:40px;
+
+    right:40px;
+
+}
+
+
+/*==================================================
+                FLOATING HEARTS
+==================================================*/
+
+.hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-80px;
+
+    font-size:24px;
+
+    opacity:.8;
+
+    animation:heartFloat 12s linear infinite;
+
+}
+
+.hearts span:nth-child(1){
+
+    left:8%;
+    animation-delay:0s;
+
+}
+
+.hearts span:nth-child(2){
+
+    left:28%;
+    animation-delay:2s;
+
+}
+
+.hearts span:nth-child(3){
+
+    left:48%;
+    animation-delay:5s;
+
+}
+
+.hearts span:nth-child(4){
+
+    left:70%;
+    animation-delay:1s;
+
+}
+
+.hearts span:nth-child(5){
+
+    left:90%;
+    animation-delay:4s;
+
+}
+
+
+/*==================================================
+                MUSIC
+==================================================*/
+
+.music{
+
+    margin-top:45px;
+
+    width:320px;
+
+    max-width:90%;
+
+    border-radius:40px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.25);
+
+}
+
+
+/*==================================================
+                END
+==================================================*/
+
+.finish{
+
+    margin-top:45px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#fff;
+
+    text-shadow:
+        0 4px 15px rgba(255,255,255,.25);
+
+}
+
+
+/*==================================================
+                BACK BUTTON
+==================================================*/
+
+.back{
+
+    margin-top:30px;
+
+    font-size:17px;
+
+    letter-spacing:5px;
+
+    color:white;
+
+    cursor:pointer;
+
+    text-transform:uppercase;
+
+    animation:pulse 1.5s infinite;
+
+    transition:.3s;
+
+}
+
+.back:hover{
+
+    color:#ffd8e8;
+
+    transform:scale(1.08);
+
+}
+
+
+/*==================================================
+                FADE OUT
+==================================================*/
+
+body.fade{
+
+    animation:fadeOut .8s forwards;
+
+}
+
+
+/*==================================================
+                ANIMATIONS
+==================================================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-14px);
+
+    }
+
+}
+
+@keyframes glow{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        filter:
+            drop-shadow(0 0 15px rgba(255,220,140,.4));
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+        filter:
+            drop-shadow(0 0 35px rgba(255,220,140,.9));
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.45;
+
+    }
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-120vh)
+            rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes fadeOut{
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:900px){
+
+    h1{
+
+        font-size:65px;
+
+    }
+
+    h1 span{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+    .cake{
+
+        width:230px;
+
+    }
+
+    .memory img{
+
+        width:260px;
+
+        height:340px;
+
+    }
+
+    .finish{
+
+        font-size:42px;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    h1{
+
+        font-size:48px;
+
+    }
+
+    h1 span{
+
+        font-size:22px;
+
+    }
+
+    .subtitle{
+
+        font-size:16px;
+
+    }
+
+    .cake{
+
+        width:180px;
+
+    }
+
+    .memory img{
+
+        width:210px;
+
+        height:280px;
+
+    }
+
+    .flower1,
+    .flower2{
+
+        width:70px;
+
+    }
+
+    .butterfly{
+
+        width:45px;
+
+    }
+
+    .finish{
+
+        font-size:34px;
+
+    }
+
+    .back{
+
+        font-size:13px;
+
+        letter-spacing:3px;
+
+    }
+
+}
